@@ -70,7 +70,7 @@
     "template": [
       "default",
       "statictoc",
-      "./tmpl/bepin_new"
+      "./template/bepin_new"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",

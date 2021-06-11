@@ -17,5 +17,5 @@ src/
 gh-pages/
 tools/
 ./build.*
-templates/
+template/
 common/

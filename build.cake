@@ -4,15 +4,26 @@
 #addin nuget:?package=Cake.Json
 #addin nuget:?package=Newtonsoft.Json
 #addin nuget:?package=Cake.FileHelpers
+#addin nuget:?package=Cake.SemVer&version=4.0.0
+#addin nuget:?package=semver&version=2.0.4
 
 var target = Argument("target", "Build");
-var buildVersion = Argument("build_version", RunGit("rev-parse --abbrev-ref HEAD"));
+var buildVersion = Argument("build_version", GetVersionString());
 
 Information($"Version to build: {buildVersion}");
 
+string GetVersionString() {
+    var res = "";
+    DoInDirectory("..", () =>
+    {
+        res = RunGit("rev-parse --abbrev-ref HEAD");
+    });
+    return res;
+}
+
 string RunGit(string command, string separator = "") 
 {
-    using(var process = StartAndReturnProcess("git", new ProcessSettings { Arguments = command, RedirectStandardOutput = true })) 
+    using(var process = StartAndReturnProcess("git", new() { Arguments = command, RedirectStandardOutput = true })) 
     {
         process.WaitForExit();
         return string.Join(separator, process.GetStandardOutput());
@@ -22,7 +33,7 @@ string RunGit(string command, string separator = "")
 void CleanDir(DirectoryPath path) 
 {
     if(DirectoryExists(path))
-        DeleteDirectory(path, new DeleteDirectorySettings { Force = true, Recursive = true });
+        DeleteDirectory(path, new() { Force = true, Recursive = true });
 }
 
 Task("Cleanup")
@@ -31,6 +42,11 @@ Task("Cleanup")
     DoInDirectory("..", () => 
     {
         CleanDir("_site");
+        // if (DirectoryExists("gh-pages"))
+        // {
+        //     CleanDir("gh-pages");
+        //     RunGit("worktree remove gh-pages");
+        // }
     });
 });
 
@@ -40,7 +56,7 @@ Task("CleanDeps")
     DoInDirectory("..", () => 
     {
         CleanDir("src");
-        CleanDir("common");
+        
     });
 });
 
@@ -49,7 +65,7 @@ Task("PullDeps")
 {
     DoInDirectory("..", () =>
     {
-        if(!DirectoryExists("src"))
+        if (!DirectoryExists("src"))
         {
             Information("Pulling BepInEx");
             CreateDirectory("src");
@@ -60,8 +76,14 @@ Task("PullDeps")
                 if(buildVersion != "master")
                     RunGit($"checkout {buildVersion}");
                 RunGit("submodule update --init --recursive");
-                //NuGetRestore("BepInEx.sln");
             });
+        }
+
+        if (!DirectoryExists("template"))
+        {
+            Information("Pulling template");
+            CreateDirectory("template");
+            RunGit("clone https://github.com/BepInEx/bepinex-docs-template.git template");
         }
     });
 });
@@ -74,7 +96,8 @@ Task("LoadGHPages")
         if (DirectoryExists("gh-pages"))
         {
             Information("Cleaning up previous worktree");
-            RunGit("worktree remove gh-pages");
+            // RunGit("worktree remove gh-pages");
+            return;
         }
         Information("Loading GH Pages as a worktree");
         RunGit("fetch");
@@ -85,14 +108,19 @@ Task("LoadGHPages")
 Task("GenDocs")
     .Does(() => 
 {
-    Information("Generating metadata");
-    DocFxMetadata("./docfx.json");
+    DoInDirectory("..", () =>
+    {
+        Information("Generating metadata");
+        DocFxMetadata("./docfx.json");
 
-    Information("Generating docs");
-    DocFxBuild("./docfx.json", new DocFxBuildSettings {
-        // GlobalMetadata = {
-        //     ["_urlPrefix"] = urlPrefix
-        // }
+        Information("Generating docs");
+        var gitInfo = RunGit("log --pretty=\"%h; %ci\" -1");
+        DocFxBuild("./docfx.json", new() {
+            GlobalMetadata = {
+                ["_docsVersion"] = buildVersion,
+                ["_buildInfo"] = gitInfo
+            }
+        });
     });
 });
 
@@ -104,26 +132,53 @@ Task("PublishGHPages")
     .IsDependentOn("GenDocs")
     .Does(() => 
 {
-    var ghPages = Directory("gh-pages");
-    var buildDir = ghPages + Directory(buildVersion);
+    DoInDirectory("..", () =>
+    {
+        var ghPages = Directory("gh-pages");
+        var buildDir = ghPages + Directory(buildVersion);
 
-    Information($"Copying docs to {buildDir}");
-    CleanDir(buildDir);
-    CreateDirectory(buildDir);
-    CopyDirectory("_site", buildDir);
+        Information($"Copying docs to {buildDir}");
+        CleanDir(buildDir);
+        CreateDirectory(buildDir);
+        CopyDirectory("_site", buildDir);
 
-    var allTags = GetDirectories("gh-pages/*", new GlobberSettings {
-        Predicate = d => !d.Hidden
-    });
+        bool IsVersionDir(DirectoryPath d) => d.GetDirectoryName().StartsWith("v");
 
-    Information($"Generating versions file");
-    FileWriteText(ghPages + File("versions.json"),
-        SerializeJsonPretty(new Dictionary<string, object> {
-            ["versions"] = allTags.Select(d => new Dictionary<string, object> {
-                ["name"] = d.GetDirectoryName(),
-                ["tag"] = d.GetDirectoryName()
-            })
+        var allVersions = GetDirectories("gh-pages/*")
+                .Where(IsVersionDir)
+                .Select(d => ParseSemVer(d.GetDirectoryName()[1..]));
+        var latestVersion = allVersions.Max();
+
+        // Version target
+        if (buildVersion.StartsWith("v"))
+        {
+            var curVersion = ParseSemVer(buildVersion[1..]);
+
+            Information($"Current version: {curVersion}; Latest built version: {latestVersion}");
+
+            if (curVersion >= latestVersion)
+            {
+                Information("Updating index version");
+
+                var deleteDirs = GetDirectories("gh-pages/*")
+                    .Where(d => !IsVersionDir(d) && d.GetDirectoryName() != "master" && d.GetDirectoryName() != "gh-pages");
+
+                DeleteDirectories(deleteDirs, new() {
+                    Force = true,
+                    Recursive = true
+                });
+
+                CopyDirectory("_site", ghPages);
+            }
+        }
+
+        Information($"Generating versions file");
+        FileWriteText(ghPages + File("versions.json"),
+            SerializeJsonPretty(new Dictionary<string, object> {
+                ["versions"] = allVersions.Select(v => v.ToString()).Concat(new[] { "master" }),
+                ["latestVersion"] = latestVersion.ToString()
         }));
+    });
 });
 
 Task("Build")
@@ -134,7 +189,10 @@ Task("Build")
 Task("Serve")
     .Does(() =>
 {
-    DocFxServe("./_site");
+    DoInDirectory("..", () =>
+    {
+         DocFxServe("./_site");
+    });
 });
 
 Task("BuildServe")

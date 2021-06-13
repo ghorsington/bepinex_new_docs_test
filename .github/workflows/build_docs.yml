@@ -24,7 +24,7 @@ jobs:
       shell: bash
       run: git worktree add common common
     - name: Run CakeBuild script
-      run: ./build.ps1 --target=PublishGHPages --build_version="${env:GH_BRANCH}"
+      run: ./common/build.ps1 --target=PublishGHPages --build_version="${env:GH_BRANCH}"
     - name: Deploy to GH Pages
       uses: crazy-max/ghaction-github-pages@v1
       with:

@@ -26,10 +26,10 @@ jobs:
     - name: Run CakeBuild script
       run: ./common/build.ps1 --target=PublishGHPages --build_version="${env:GH_BRANCH}"
     - name: Deploy to GH Pages
-      uses: crazy-max/ghaction-github-pages@v1
+      uses: crazy-max/ghaction-github-pages@v2
       with:
         target_branch: gh-pages
         build_dir: gh-pages
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GITHUB_PAT: ${{ secrets.GH_PAT }}
+        GH_PAT: ${{ secrets.GH_PAT }}

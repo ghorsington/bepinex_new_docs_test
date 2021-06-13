@@ -115,6 +115,7 @@ Task("GenDocs")
 
         Information("Generating docs");
         var gitInfo = RunGit("log --pretty=\"%h; %ci\" -1");
+
         DocFxBuild("./docfx.json", new() {
             GlobalMetadata = {
                 ["_docsVersion"] = buildVersion,
@@ -146,8 +147,8 @@ Task("PublishGHPages")
 
         var allVersions = GetDirectories("gh-pages/*")
                 .Where(IsVersionDir)
-                .Select(d => ParseSemVer(d.GetDirectoryName()[1..]));
-        var latestVersion = allVersions.Max();
+                .Select(d => (d.GetDirectoryName(), ParseSemVer(d.GetDirectoryName()[1..])));
+        var (latestTag, latestVersion) = allVersions.OrderByDescending((v) => v.Item2).FirstOrDefault();
 
         // Version target
         if (buildVersion.StartsWith("v"))
@@ -175,8 +176,8 @@ Task("PublishGHPages")
         Information($"Generating versions file");
         FileWriteText(ghPages + File("versions.json"),
             SerializeJsonPretty(new Dictionary<string, object> {
-                ["versions"] = allVersions.Select(v => v.ToString()).Concat(new[] { "master" }),
-                ["latestVersion"] = latestVersion?.ToString() ?? ""
+                ["versions"] = allVersions.Select((v) => new { tag = v.Item1, version = v.Item2.ToString()}).Concat(new[] { new { tag = "master", version = "master" } }),
+                ["latestTag"] = latestTag?.ToString() ?? ""
         }));
     });
 });

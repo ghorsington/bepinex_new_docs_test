@@ -101,7 +101,7 @@ Task("LoadGHPages")
         }
         Information("Loading GH Pages as a worktree");
         RunGit("fetch");
-        RunGit("worktree add gh-pages gh-pages");
+        RunGit("worktree add --checkout gh-pages gh-pages");
     });
 });
 
@@ -176,7 +176,7 @@ Task("PublishGHPages")
         FileWriteText(ghPages + File("versions.json"),
             SerializeJsonPretty(new Dictionary<string, object> {
                 ["versions"] = allVersions.Select(v => v.ToString()).Concat(new[] { "master" }),
-                ["latestVersion"] = latestVersion.ToString()
+                ["latestVersion"] = latestVersion?.ToString() ?? ""
         }));
     });
 });

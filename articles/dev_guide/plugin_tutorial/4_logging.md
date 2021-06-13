@@ -1,7 +1,3 @@
----
-title: "Plugin walkthrough: Logging messages"
----
-
 # Logging messages
 
 One of the most important parts of any plugin is logging messages. Be it a 

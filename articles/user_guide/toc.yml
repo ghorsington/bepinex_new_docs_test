@@ -1,9 +1,6 @@
 - name: Installation
-  href: installation/toc.yml
-  topicHref: installation/index.md
+  href: installation.md
 - name: Configuration
   href: configuration.md
 - name: Upgrading
   href: upgrading.md
-- name: Troubleshooting
-  href: troubleshooting.md

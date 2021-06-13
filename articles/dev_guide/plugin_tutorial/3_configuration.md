@@ -1,7 +1,3 @@
----
-title: "Plugin walkthrough: Using configuration files"
----
-
 # Using configuration files
 
 Usually you may want to allow the user of the plug-in to change the specifics 

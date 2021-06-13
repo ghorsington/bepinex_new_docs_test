@@ -1,7 +1,10 @@
-- name: Running games on Steam
-  href: steam_interop.md
-- name: Debugging plugins and game assemblies
-  href: debug/toc.yml
-  topicHref: debug/index.md
+- name: Debugging BepInEx with dnSpy
+  href: dnspy_debug.md
+- name: Porting to new Unity games
+  href: porting.md
+- name: .NET profiles and BepInEx support
+  href: dotnet_profiles.md
 - name: Compatibility with other modding frameworks
   href: compatibility.md
+- name: Known limitations
+  href: limitations.md

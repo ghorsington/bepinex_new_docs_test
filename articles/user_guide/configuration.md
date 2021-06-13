@@ -1,6 +1,5 @@
 ---
 uid: configuration
-title: Configuration
 ---
 
 # Configuration

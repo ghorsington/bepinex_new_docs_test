@@ -1,6 +1,5 @@
 ---
 uid: preloader_patches
-title: Using preloader patchers
 ---
 
 # Using preloader patchers

@@ -1,7 +1,3 @@
----
-title: Upgrading
----
-
 # Upgrading
 
 ## Migration from previous versions of BepInEx
@@ -39,5 +35,5 @@ To migrate from a previous version of BepInEx, do the following:
     * `COM3D2.UnityInjector.Patcher` (and other UnityInjector patchers)
     * `opengl32.dll`  
   Use Windows' search tool if you cannot find those.
-2. [Install BepInEx 4 normally](<xref:installation>)
+2. [Install BepInEx 4 normally](./Installation#installation)
 3. Download and install [UnityInjectorLoader](https://github.com/BepInEx/BepInEx.UnityInjectorLoader/releases) and [SybarisLoader](https://github.com/BepInEx/BepInEx.SybarisLoader.Patcher/releases) to enable UnityInjector and Sybaris compatibility

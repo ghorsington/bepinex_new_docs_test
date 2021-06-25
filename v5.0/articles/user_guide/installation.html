@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installing BepInEx</title>
+    <meta name="title" content="Installing BepInEx">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../static/styles/template.css">
+    <link rel="stylesheet" href="../../static/styles/main.css">
+    <script>
+        var docsVersion = "v5.0";
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+            </a>
+            <div class="nav">
+                <div class="nav-item">
+                    <a href="../../articles/index.html">Articles</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../../api/index.html">API Documentation</a>
+                </div>
+            </div>
+            <div id="version-picker"></div>
+            <a id="theme-switch" class="icon-lightbulb"></a>
+        </nav>
+    </header>
+    <section id="global-messages"></section>
+    <section class="breadcrumb">
+        <span>
+            <a href="../../articles/index.html">Articles</a>
+        </span>
+        <span>
+            <a href="../user_guide/index.html">Using BepInEx</a>
+        </span>
+            <span>
+                <a href="../user_guide/installation.html">Installation</a>
+            </span>
+                </section>
+    <aside class="toc">
+    <span class="toc-menu-button">
+        <span>Table of Contents</span>
+        <i class="icon-menu"></i>
+    </span>
+    <div class="toc-items">
+    <ul>
+        <li>
+            <details open="">
+            <summary>
+            <a href="../user_guide/index.html" class="active">Using BepInEx</a>
+            </summary>
+            <ul>
+                <li>
+                    <a href="../user_guide/installation.html" class="active">Installation</a>
+                </li>
+                <li>
+                    <a href="../user_guide/configuration.html">Configuration</a>
+                </li>
+                <li>
+                    <a href="../user_guide/upgrading.html">Upgrading</a>
+                </li>
+            </ul>        </details>
+        </li>
+        <li>
+            <details>
+            <summary>
+            <a href="../dev_guide/index.html">Plugin development</a>
+            </summary>
+            <ul>
+                <li>
+                    <details>
+                    <summary>
+                    <a href="../dev_guide/plugin_tutorial/index.html">Walkthrough: writing a basic plugin</a>
+                    </summary>
+                    <ul>
+                        <li>
+                            <a href="../dev_guide/plugin_tutorial/1_setup.html">Part I: Setting up the development environment</a>
+                        </li>
+                        <li>
+                            <a href="../dev_guide/plugin_tutorial/2_plugin_start.html">Part II: Writing a basic plug-in class</a>
+                        </li>
+                        <li>
+                            <a href="../dev_guide/plugin_tutorial/3_configuration.html">Part III: Configuration</a>
+                        </li>
+                        <li>
+                            <a href="../dev_guide/plugin_tutorial/4_logging.html">Part IV: Logging</a>
+                        </li>
+                        <li>
+                            <a href="../dev_guide/plugin_tutorial/5_distributing.html">Part V: Distributing</a>
+                        </li>
+                    </ul>        </details>
+                </li>
+                <li>
+                    <a href="../dev_guide/preloader_patchers.html">How to: writing preloader patchers</a>
+                </li>
+                <li>
+                    <a href="../dev_guide/harmony_wrapper.html">Runtime patching with HarmonyWrapper</a>
+                </li>
+            </ul>        </details>
+        </li>
+        <li>
+            <details>
+            <summary>
+            <a href="../advanced/index.html">Advanced topics</a>
+            </summary>
+            <ul>
+                <li>
+                    <a href="../advanced/dnspy_debug.html">Debugging BepInEx with dnSpy</a>
+                </li>
+                <li>
+                    <a href="../advanced/porting.html">Porting to new Unity games</a>
+                </li>
+                <li>
+                    <a href="../advanced/dotnet_profiles.html">.NET profiles and BepInEx support</a>
+                </li>
+                <li>
+                    <a href="../advanced/compatibility.html">Compatibility with other modding frameworks</a>
+                </li>
+                <li>
+                    <a href="../advanced/limitations.html">Known limitations</a>
+                </li>
+            </ul>        </details>
+        </li>
+    </ul></div>
+    </aside>
+    <main class="  ">
+<h1 id="installing-bepinex">Installing BepInEx</h1>
+
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li><em>Supported Operating Systems</em>
+<ul>
+<li>Windows 7, 8, 8.1 and 10 (both x86 and x64 are supported)</li>
+<li>Any OS that has support for <a href="https://www.winehq.org/">Wine</a> (Linux, macOS, FreeBSD, ...)</li>
+<li>Any OS that has support for <a href="https://www.mono-project.com/">Mono</a> (Windows, Linux, macOS)</li>
+</ul>
+</li>
+<li><em>Supported Unity games</em>
+<ul>
+<li>Unity 4 or newer</li>
+<li><strong>The game has to use Mono as the scripting backend. More info in <a class="xref" href="../advanced/limitations.html">limitations section</a>.</strong></li>
+</ul>
+</li>
+</ul>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Games built with IL2CPP are not supported!<br>
+For more information, read the whole explanation in the <a class="xref" href="../advanced/limitations.html">limitations section</a>.</p>
+</div>
+<h2 id="where-to-download-bepinex">Where to download BepInEx</h2>
+<p>BepInEx is distributed in two builds: <em>stable</em> and <em>bleeding edge</em>.</p>
+<p><strong>Stable builds</strong> are available on <a href="https://github.com/BepInEx/BepInEx/releases">GitHub</a>.<br>
+Stable builds are released once a new iteration of BepInEx is considered feature-complete.<br>
+They have the least bugs, but some newest features might not be available.<br>
+<strong>It is recommended to use stable builds in most cases.</strong></p>
+<p><strong>Bleeding edge builds</strong> are available on <a href="https://builds.bepis.io/projects/bepinex_be">BepisBuilds</a>.
+Bleeding edge builds are always the latest builds of the source code. Thus they are the opposite to stable builds: they have the newest features and bugfixes available, but usually tend to be the most buggy.<br>
+Therefore you should use bleeding edge builds only if you are asked to or if you want to preview the upcoming version of BepInEx.</p>
+<h2 id="installing-bepinex-1">Installing BepInEx</h2>
+<p>Currently, BepInEx can be installed manually.</p>
+<ol>
+<li><p>Download the correct version of BepInEx.</p>
+<p><a href="#where-to-download-bepinex">Download BepInEx from one of the available sources.</a><br>
+In the download section, all BepInEx distributions are designated using the following naming convention:</p>
+<p><code>BepInEx_&lt;arch&gt;_&lt;build&gt;_&lt;version&gt;.zip</code></p>
+<p>Each value has different options depending on the game and your OS:</p>
+<ul>
+<li><code>arch</code> -- The OS and architecture this BepInEx was built against. Has the following values:
+<ul>
+<li><code>x86</code>: For computers running <em>32-bit Windows</em>.</li>
+<li><code>x64</code>: For computers running <em>64-bit Windows</em>.</li>
+<li><code>Patcher</code>: For computers running Linux, macOS and other non-Windows systems.</li>
+</ul>
+</li>
+<li><code>build</code> -- <em>Only in bleeding edge builds.</em> Specifies the exact commit BepInEx was built against.</li>
+<li><code>version</code> -- Exact version of BepInEx.</li>
+</ul>
+</li>
+<li><p>Extract the contents into the game root.</p>
+<p>After you have downloaded the correct game version, extact the archive into the game folder where the game exectuable is located (so called <em>game root folder</em>).</p>
+</li>
+<li><p><em>Only for <code>Patcher</code> builds:</em> Run the patcher.</p>
+<p>If you have downloaded and installed the <code>Patcher</code> build, run <code>BepInEx.Patcher.exe</code> which will permanently patch the game to run BepInEx.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you are using a non-Windows system, you might need to run the patcher via mono:<br>
+<code>mono BepInEx.Patcher.exe</code></p>
+</div>
+</li>
+</ol>
+<h2 id="next-installing-plugins-and-configuration">Next: Installing plugins and configuration.</h2>
+<p>After you're done installing BepInEx, you can start installing and using plugins. Simply put plugins into <code>BepInEx/plugins</code> folder in the game folder and you're good to go.</p>
+<p>Additionally, you might want to configure plugins and BepInEx itself. For that, please refer to the <a class="xref" href="configuration.html">configuration guide</a>.</p>
+</main>
+    <aside class="affix">
+    <div></div>
+    </aside>    <footer>
+        <div>BepInEx Docs (v5.0)</div>
+        <div>Build info: 3a47463; 2021-06-13 23:30:50 +0300</div>
+    </footer>
+<script type="text/javascript" src="../../static/scripts/template.js"></script>
+<script type="text/javascript" src="../../static/scripts/main.js"></script>
+</body>
+</html>

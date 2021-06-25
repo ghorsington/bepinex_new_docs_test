@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging with dnSpy</title>
+    <meta name="title" content="Debugging with dnSpy">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../static/styles/template.css">
+    <link rel="stylesheet" href="../../static/styles/main.css">
+    <script>
+        var docsVersion = "v5.0";
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+            </a>
+            <div class="nav">
+                <div class="nav-item">
+                    <a href="../../articles/index.html">Articles</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../../api/index.html">API Documentation</a>
+                </div>
+            </div>
+            <div id="version-picker"></div>
+            <a id="theme-switch" class="icon-lightbulb"></a>
+        </nav>
+    </header>
+    <section id="global-messages"></section>
+    <section class="breadcrumb">
+        <span>
+            <a href="../../articles/index.html">Articles</a>
+        </span>
+                    <span>
+            <a href="../advanced/index.html">Advanced topics</a>
+        </span>
+            <span>
+                <a href="../advanced/dnspy_debug.html">Debugging BepInEx with dnSpy</a>
+            </span>
+    </section>
+    <aside class="toc">
+    <span class="toc-menu-button">
+        <span>Table of Contents</span>
+        <i class="icon-menu"></i>
+    </span>
+    <div class="toc-items">
+    <ul>
+        <li>
+            <details>
+            <summary>
+            <a href="../user_guide/index.html">Using BepInEx</a>
+            </summary>
+            <ul>
+                <li>
+                    <a href="../user_guide/installation.html">Installation</a>
+                </li>
+                <li>
+                    <a href="../user_guide/configuration.html">Configuration</a>
+                </li>
+                <li>
+                    <a href="../user_guide/upgrading.html">Upgrading</a>
+                </li>
+            </ul>        </details>
+        </li>
+        <li>
+            <details>
+            <summary>
+            <a href="../dev_guide/index.html">Plugin development</a>
+            </summary>
+            <ul>
+                <li>
+                    <details>
+                    <summary>
+                    <a href="../dev_guide/plugin_tutorial/index.html">Walkthrough: writing a basic plugin</a>
+                    </summary>
+                    <ul>
+                        <li>
+                            <a href="../dev_guide/plugin_tutorial/1_setup.html">Part I: Setting up the development environment</a>
+                        </li>
+                        <li>
+                            <a href="../dev_guide/plugin_tutorial/2_plugin_start.html">Part II: Writing a basic plug-in class</a>
+                        </li>
+                        <li>
+                            <a href="../dev_guide/plugin_tutorial/3_configuration.html">Part III: Configuration</a>
+                        </li>
+                        <li>
+                            <a href="../dev_guide/plugin_tutorial/4_logging.html">Part IV: Logging</a>
+                        </li>
+                        <li>
+                            <a href="../dev_guide/plugin_tutorial/5_distributing.html">Part V: Distributing</a>
+                        </li>
+                    </ul>        </details>
+                </li>
+                <li>
+                    <a href="../dev_guide/preloader_patchers.html">How to: writing preloader patchers</a>
+                </li>
+                <li>
+                    <a href="../dev_guide/harmony_wrapper.html">Runtime patching with HarmonyWrapper</a>
+                </li>
+            </ul>        </details>
+        </li>
+        <li>
+            <details open="">
+            <summary>
+            <a href="../advanced/index.html" class="active">Advanced topics</a>
+            </summary>
+            <ul>
+                <li>
+                    <a href="../advanced/dnspy_debug.html" class="active">Debugging BepInEx with dnSpy</a>
+                </li>
+                <li>
+                    <a href="../advanced/porting.html">Porting to new Unity games</a>
+                </li>
+                <li>
+                    <a href="../advanced/dotnet_profiles.html">.NET profiles and BepInEx support</a>
+                </li>
+                <li>
+                    <a href="../advanced/compatibility.html">Compatibility with other modding frameworks</a>
+                </li>
+                <li>
+                    <a href="../advanced/limitations.html">Known limitations</a>
+                </li>
+            </ul>        </details>
+        </li>
+    </ul></div>
+    </aside>
+    <main class="  ">
+<h1 id="debugging-with-dnspy">Debugging with dnSpy</h1>
+
+<p>Due to the in-memory patching introduced in BepInEx 4.0, it is not possible to use dnSpy to debug plugins with the base installation of BepInEx. Instead, the developers must use the modified <code>BepInEx.Patcher.exe</code>.</p>
+<blockquote>
+<p><strong>NOTE</strong><br>
+The dnSpy-compatible BepInEx patcher does not support in-memory preloader patchers!<br>
+Thus, you can only debug normal plug-ins.</p>
+</blockquote>
+<h3 id="setting-up-bepinex">Setting up BepInEx</h3>
+<p>The permanent assembly patcher for BepInEx is provided as a separate download in the <a href="http://bepisbuilds.dyn.mk/bepinex_be">Bleeding Edge</a> builds. In order to use the dnSpy debugger functionality, you must apply the hardpatch to the game.</p>
+<p>To set up BepInEx to work with dnSpy debugger, do the following:</p>
+<ol>
+<li><p>Download the base BepInEx build and the BepInEx patcher (from <a href="https://github.com/BepInEx/BepInEx/releases">releases</a>, <a href="http://bepisbuilds.dyn.mk/bepinex_be">Bleeding Edge builds</a>) or  <a href="./Building">build them yourself</a>.</p>
+</li>
+<li><p>Install base BepInEx as per the <a href="https://github.com/BepInEx/BepInEx/wiki/Installation#installation">installation guide</a>.</p>
+</li>
+<li><p>Place <code>BepInEx.Patcher.exe</code> into the game's root folder</p>
+</li>
+<li><p>Run <code>BepInEx.Patcher.exe</code> (or <code>mono BepInEx.Patcher.exe</code> if you are on Linux/macOS). This will patch game's <code>UnityEngine.dll</code> and place <code>BepInEx.Bootstrap.dll</code> into the game's <code>Managed</code> folder.</p>
+</li>
+<li><p>Modify <code>doorstop_config.ini</code> as follows:</p>
+<pre><code class="lang-ini">enabled=false
+</code></pre>
+</li>
+</ol>
+<h3 id="setting-up-dnspy">Setting up dnSpy</h3>
+<ol>
+<li>Download the latest version of <a href="https://github.com/0xd4d/dnSpy/releases">dnSpy</a> and an appropritate version of Unity-debugging package</li>
+<li>From the downloaded Unity-debugging package, pick <code>mono.dll</code> that corresponds to the version of the game you want to debug and replace the game's original <code>mono.dll</code> with it</li>
+<li>Open dnSpy and open the plugin DLL (from <code>BepInEx</code> folder) you want to debug. Additionally, open game's own assemblies to debug (from <code>Managed</code> folder)</li>
+<li>Set up appropriate breakpoints</li>
+<li>Open <code>Debug &gt; Start Debugging</code> dialogue</li>
+<li>Select <code>Unity</code> as the Debug engine, select the game's EXE (not the launcher) and press OK to start debugging</li>
+</ol>
+<p>If everything worked correctly, dnSpy will not time out in 30 seconds (or in whatever timeout time you configured) and will break on any breakpoint you set.</p>
+<h3 id="reverting-back-to-original-bepinex">Reverting back to original BepInEx</h3>
+<p>When you don't want to debug anymore, you can revert back to the original game installation as follows:</p>
+<ol>
+<li><p>Restore <code>mono.dll</code> to the original version</p>
+</li>
+<li><p>From every <code>Managed</code> folder found in the game's root (or its subfolders), remove <code>BepInEx.Bootstrap.dll</code> and restore <code>UnityEngine.dll.bak</code></p>
+</li>
+<li><p>Edit <code>doorstop_config.ini</code> as follows:</p>
+<pre><code class="lang-ini">enabled=true
+</code></pre>
+</li>
+</ol>
+</main>
+    <aside class="affix">
+    <div></div>
+    </aside>    <footer>
+        <div>BepInEx Docs (v5.0)</div>
+        <div>Build info: 3a47463; 2021-06-13 23:30:50 +0300</div>
+    </footer>
+<script type="text/javascript" src="../../static/scripts/template.js"></script>
+<script type="text/javascript" src="../../static/scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to BepinEx Docs!</title>
+    <meta name="title" content="Welcome to BepinEx Docs!">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="static/styles/template.css">
+    <link rel="stylesheet" href="static/styles/main.css">
+    <script>
+        var docsVersion = "v5.0";
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+            </a>
+            <div class="nav">
+                <div class="nav-item">
+                    <a href="articles/index.html">Articles</a>
+                </div>
+                <div class="nav-item">
+                    <a href="api/index.html">API Documentation</a>
+                </div>
+            </div>
+            <div id="version-picker"></div>
+            <a id="theme-switch" class="icon-lightbulb"></a>
+        </nav>
+    </header>
+    <section id="global-messages"></section>
+        <main class="from-toc to-affix center">
+
+<div style="width: 256px; margin: auto;">
+    <img src="https://avatars2.githubusercontent.com/u/39589027?s=256">
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Please not that documentation for BepInEx 6 are WIP.<br>
+If you would like to help with writing guides for BepInEx 6, consider
+<a href="https://github.com/BepInEx/bepinex_docs#contributing">contributing by writing guides</a>!</p>
+</div>
+<p>Welcome to BepInEx documentation!</p>
+<p>Here you can find guides on how to install, configure and develop plugins for BepInEx!</p>
+<h2 id="about-bepinex">About BepInEx</h2>
+<p><strong>Bep</strong>is <strong>In</strong>jector <strong>Ex</strong>tensible is a patcher/plug-in framework for Unity games that use Mono as their scripting backend.</p>
+<p>BepInEx provides various features, including</p>
+<ul>
+<li><strong>drop-in installation</strong>;</li>
+<li><strong>built-in configuration and logging systems</strong>;</li>
+<li><strong>runtime method patching with Harmony</strong> -- includes <a href="https://github.com/pardeike/Harmony">Harmony</a> and <a href="https://github.com/MonoMod/MonoMod">MonoMod</a> to enable runtime method injection;</li>
+<li><strong>in-memory assembly patching</strong> -- allows to patch game's assemblies with <a href="https://github.com/jbevain/cecil">Mono.Cecil</a> in memory with the help of <a href="https://github.com/NeighTools/UnityDoorstop">UnityDoorstop</a>.</li>
+</ul>
+<p>BepInEx is fully open source under the MIT license.</p>
+<h2 id="getting-started">Getting started</h2>
+<ul>
+<li><a class="xref" href="articles/user_guide/installation.html">Install BepInEx</a></li>
+<li><a href="xref:dev_tools">List of some plugins useful for modding games</a></li>
+<li><a class="xref" href="articles/dev_guide/plugin_tutorial/index.html">Write plugins</a></li>
+<li><a href="xref:api">Browse API and its documentation</a></li>
+</ul>
+</main>
+    <footer>
+        <div>BepInEx Docs (v5.0)</div>
+        <div>Build info: 3a47463; 2021-06-13 23:30:50 +0300</div>
+    </footer>
+<script type="text/javascript" src="static/scripts/template.js"></script>
+<script type="text/javascript" src="static/scripts/main.js"></script>
+</body>
+</html>

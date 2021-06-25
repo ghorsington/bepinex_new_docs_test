@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <meta name="title" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../static/styles/template.css">
+    <link rel="stylesheet" href="../../static/styles/main.css">
+    <script>
+        var docsVersion = "v5.0";
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+            </a>
+            <div class="nav">
+                <div class="nav-item">
+                    <a href="../../articles/index.html">Articles</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../../api/index.html">API Documentation</a>
+                </div>
+            </div>
+            <div id="version-picker"></div>
+            <a id="theme-switch" class="icon-lightbulb"></a>
+        </nav>
+    </header>
+    <section id="global-messages"></section>
+    <section class="breadcrumb">
+        <span>
+            <a href="../../articles/index.html">Articles</a>
+        </span>
+                    <span>
+            <a href="../advanced/index.html">Advanced topics</a>
+        </span>
+            <span>
+                <a href="../advanced/limitations.html">Known limitations</a>
+            </span>
+    </section>
+    <aside class="toc">
+    <span class="toc-menu-button">
+        <span>Table of Contents</span>
+        <i class="icon-menu"></i>
+    </span>
+    <div class="toc-items">
+    <ul>
+        <li>
+            <details>
+            <summary>
+            <a href="../user_guide/index.html">Using BepInEx</a>
+            </summary>
+            <ul>
+                <li>
+                    <a href="../user_guide/installation.html">Installation</a>
+                </li>
+                <li>
+                    <a href="../user_guide/configuration.html">Configuration</a>
+                </li>
+                <li>
+                    <a href="../user_guide/upgrading.html">Upgrading</a>
+                </li>
+            </ul>        </details>
+        </li>
+        <li>
+            <details>
+            <summary>
+            <a href="../dev_guide/index.html">Plugin development</a>
+            </summary>
+            <ul>
+                <li>
+                    <details>
+                    <summary>
+                    <a href="../dev_guide/plugin_tutorial/index.html">Walkthrough: writing a basic plugin</a>
+                    </summary>
+                    <ul>
+                        <li>
+                            <a href="../dev_guide/plugin_tutorial/1_setup.html">Part I: Setting up the development environment</a>
+                        </li>
+                        <li>
+                            <a href="../dev_guide/plugin_tutorial/2_plugin_start.html">Part II: Writing a basic plug-in class</a>
+                        </li>
+                        <li>
+                            <a href="../dev_guide/plugin_tutorial/3_configuration.html">Part III: Configuration</a>
+                        </li>
+                        <li>
+                            <a href="../dev_guide/plugin_tutorial/4_logging.html">Part IV: Logging</a>
+                        </li>
+                        <li>
+                            <a href="../dev_guide/plugin_tutorial/5_distributing.html">Part V: Distributing</a>
+                        </li>
+                    </ul>        </details>
+                </li>
+                <li>
+                    <a href="../dev_guide/preloader_patchers.html">How to: writing preloader patchers</a>
+                </li>
+                <li>
+                    <a href="../dev_guide/harmony_wrapper.html">Runtime patching with HarmonyWrapper</a>
+                </li>
+            </ul>        </details>
+        </li>
+        <li>
+            <details open="">
+            <summary>
+            <a href="../advanced/index.html" class="active">Advanced topics</a>
+            </summary>
+            <ul>
+                <li>
+                    <a href="../advanced/dnspy_debug.html">Debugging BepInEx with dnSpy</a>
+                </li>
+                <li>
+                    <a href="../advanced/porting.html">Porting to new Unity games</a>
+                </li>
+                <li>
+                    <a href="../advanced/dotnet_profiles.html">.NET profiles and BepInEx support</a>
+                </li>
+                <li>
+                    <a href="../advanced/compatibility.html">Compatibility with other modding frameworks</a>
+                </li>
+                <li>
+                    <a href="../advanced/limitations.html" class="active">Known limitations</a>
+                </li>
+            </ul>        </details>
+        </li>
+    </ul></div>
+    </aside>
+    <main class="  ">
+
+</main>
+    <aside class="affix">
+    <div></div>
+    </aside>    <footer>
+        <div>BepInEx Docs (v5.0)</div>
+        <div>Build info: 3a47463; 2021-06-13 23:30:50 +0300</div>
+    </footer>
+<script type="text/javascript" src="../../static/scripts/template.js"></script>
+<script type="text/javascript" src="../../static/scripts/main.js"></script>
+</body>
+</html>

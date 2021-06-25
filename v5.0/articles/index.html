@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BepInEx Guide Index</title>
+    <meta name="title" content="BepInEx Guide Index">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../static/styles/template.css">
+    <link rel="stylesheet" href="../static/styles/main.css">
+    <script>
+        var docsVersion = "v5.0";
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+            </a>
+            <div class="nav">
+                <div class="nav-item">
+                    <a href="../articles/index.html">Articles</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../api/index.html">API Documentation</a>
+                </div>
+            </div>
+            <div id="version-picker"></div>
+            <a id="theme-switch" class="icon-lightbulb"></a>
+        </nav>
+    </header>
+    <section id="global-messages"></section>
+    <section class="breadcrumb">
+        <span>
+            <a href="../articles/index.html">Articles</a>
+        </span>
+                    </section>
+    <aside class="toc">
+    <span class="toc-menu-button">
+        <span>Table of Contents</span>
+        <i class="icon-menu"></i>
+    </span>
+    <div class="toc-items">
+    <ul>
+        <li>
+            <details>
+            <summary>
+            <a href="user_guide/index.html">Using BepInEx</a>
+            </summary>
+            <ul>
+                <li>
+                    <a href="user_guide/installation.html">Installation</a>
+                </li>
+                <li>
+                    <a href="user_guide/configuration.html">Configuration</a>
+                </li>
+                <li>
+                    <a href="user_guide/upgrading.html">Upgrading</a>
+                </li>
+            </ul>        </details>
+        </li>
+        <li>
+            <details>
+            <summary>
+            <a href="dev_guide/index.html">Plugin development</a>
+            </summary>
+            <ul>
+                <li>
+                    <details>
+                    <summary>
+                    <a href="dev_guide/plugin_tutorial/index.html">Walkthrough: writing a basic plugin</a>
+                    </summary>
+                    <ul>
+                        <li>
+                            <a href="dev_guide/plugin_tutorial/1_setup.html">Part I: Setting up the development environment</a>
+                        </li>
+                        <li>
+                            <a href="dev_guide/plugin_tutorial/2_plugin_start.html">Part II: Writing a basic plug-in class</a>
+                        </li>
+                        <li>
+                            <a href="dev_guide/plugin_tutorial/3_configuration.html">Part III: Configuration</a>
+                        </li>
+                        <li>
+                            <a href="dev_guide/plugin_tutorial/4_logging.html">Part IV: Logging</a>
+                        </li>
+                        <li>
+                            <a href="dev_guide/plugin_tutorial/5_distributing.html">Part V: Distributing</a>
+                        </li>
+                    </ul>        </details>
+                </li>
+                <li>
+                    <a href="dev_guide/preloader_patchers.html">How to: writing preloader patchers</a>
+                </li>
+                <li>
+                    <a href="dev_guide/harmony_wrapper.html">Runtime patching with HarmonyWrapper</a>
+                </li>
+            </ul>        </details>
+        </li>
+        <li>
+            <details>
+            <summary>
+            <a href="advanced/index.html">Advanced topics</a>
+            </summary>
+            <ul>
+                <li>
+                    <a href="advanced/dnspy_debug.html">Debugging BepInEx with dnSpy</a>
+                </li>
+                <li>
+                    <a href="advanced/porting.html">Porting to new Unity games</a>
+                </li>
+                <li>
+                    <a href="advanced/dotnet_profiles.html">.NET profiles and BepInEx support</a>
+                </li>
+                <li>
+                    <a href="advanced/compatibility.html">Compatibility with other modding frameworks</a>
+                </li>
+                <li>
+                    <a href="advanced/limitations.html">Known limitations</a>
+                </li>
+            </ul>        </details>
+        </li>
+    </ul></div>
+    </aside>
+    <main class="  ">
+<h1 id="bepinex-guide-index">BepInEx Guide Index</h1>
+
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>The documentation is WIP.<br>
+For the latest stable guide, refer to <a href="https://github.com/BepInEx/BepInEx/wiki">BepInEx wiki on GitHub</a>.</p>
+</div>
+<p>Welcome to BepInEx documentation pages! Please refer to the navigation menu on the left for all specific guides!</p>
+<h2 id="what-is-bepinex">What is BepInEx</h2>
+<p>BepInEx is a .NET plugin framework aimed at Unity games running on <a href="https://www.mono-project.com/">Mono</a> runtime.<br>
+The main goal of BepInEx is to be <em>simple to install and use for end-users</em> and to <em>provide absolutely necessary tools for modding</em> all while being <em>small and easily portable</em> to as many different Unity games as possible.</p>
+<p>While BepInEx is mainly aimed at PC games running on Windows, BepInEx can be installed on Linux, macOS and any other operating system that either has support for Mono or Windows emulation.</p>
+<h2 id="what-bepinex-is-not">What BepInEx is not</h2>
+<p>Currently BepInEx does not aim to be the solution for modding all games with .NET support on all platforms. This limitation allows BepInEx to be small and simple to install while still working on as many games as possible.</p>
+<p>As of version 5.0, support for more general .NET games is being planned.</p>
+<h2 id="getting-started-with-bepinex">Getting started with BepInEx</h2>
+<p>To start with BepInEx, you should <a class="xref" href="user_guide/installation.html">download and install it</a>.<br>
+Next, you might want to <a class="xref" href="user_guide/configuration.html">configure it and any of the plugins you install</a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>While BepInEx should work with default configuration on the majority of Unity games,
+some games might require specific entry point configuration.
+For more information, check out the guide on <a class="xref" href="advanced/porting.html">configuring BepInEx with different games</a>.</p>
+</div>
+<h2 id="developing-plugins">Developing plugins</h2>
+<p>If you are a developer, you can check the <a class="xref" href="dev_guide/plugin_tutorial/index.html">plugin creation walkthrough</a> to get acquainted with most of the API of BepInEx.
+Additionally, you should check out <a class="xref" href="dev_guide/harmony_wrapper.html">how to use Harmony to patch game methods</a> and <a class="xref" href="dev_guide/preloader_patchers.html">how to patch game assemblies with Cecil</a>.</p>
+<p>For more exact documentation on each of BepInEx's feature, consult the <a href="../api/index.html">API documentation</a></p>
+<p>Finally, the <a class="xref" href="advanced/index.html">advanced guides</a> contain information on how to debug plugins with dnSpy and elaborate on technical details of BepInEx and Unity modding.</p>
+</main>
+    <aside class="affix">
+    <div></div>
+    </aside>    <footer>
+        <div>BepInEx Docs (v5.0)</div>
+        <div>Build info: 3a47463; 2021-06-13 23:30:50 +0300</div>
+    </footer>
+<script type="text/javascript" src="../static/scripts/template.js"></script>
+<script type="text/javascript" src="../static/scripts/main.js"></script>
+</body>
+</html>

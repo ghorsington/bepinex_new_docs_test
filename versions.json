@@ -1,0 +1,17 @@
+{
+  "versions": [
+    {
+      "tag": "v5.0",
+      "version": "5.0.0"
+    },
+    {
+      "tag": "v5.4.11",
+      "version": "5.4.11"
+    },
+    {
+      "tag": "master",
+      "version": "master"
+    }
+  ],
+  "latestTag": "v5.4.11"
+}

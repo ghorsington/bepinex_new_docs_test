@@ -1,0 +1,1331 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/a/bepinex_new_docs_test/bepinex_new_docs_test",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.BaseUnityPlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.BaseUnityPlugin.html",
+          "hash": "eS7evBk4kKuZyvD+gRwKfORrW/YKXwbujC4I8540n/Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.BepInDependency.DependencyFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.BepInDependency.DependencyFlags.html",
+          "hash": "4ZGG2T3TpXPGoLQcl8qPEadc1v+sTFHPYgJT1LEw/yM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.BepInDependency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.BepInDependency.html",
+          "hash": "gQPL9+nMDRERcPCJ9HeESPa2ib/QR3zt30N1P3Cc0HU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.BepInIncompatibility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.BepInIncompatibility.html",
+          "hash": "JVMBQUXUsRpalVE5HrSaIjK/wkzaq6NgFUzc1FjKrlM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.BepInPlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.BepInPlugin.html",
+          "hash": "03m3aOOQAG9F/iYUW4UotlTLORrvGYQsMXV9HwbGrWc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.BepInProcess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.BepInProcess.html",
+          "hash": "ZnaeXHrO9lcJRbhTLvtSvNAT1tN4x6QcQlVTTdLdX4g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Bootstrap.CachedAssembly-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Bootstrap.CachedAssembly-1.html",
+          "hash": "/H4gd7kXJhqQFLnP2C/FnHGX+jSyCbjJd04S5yGWbD8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Bootstrap.Chainloader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Bootstrap.Chainloader.html",
+          "hash": "giD+Ewmemjz/mnMnuIk/hsYDYAO66Ogvu0CGdf021fA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Bootstrap.ICacheable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Bootstrap.ICacheable.html",
+          "hash": "txQ47PoqIbXSFXXDWhrA0ujVPK33g7uaeDoGFBQu9OM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Bootstrap.TypeLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Bootstrap.TypeLoader.html",
+          "hash": "0zoQg4MJ9KE03F1st+B5l3yXCRHfyX52scE1YLu5dvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Bootstrap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Bootstrap.html",
+          "hash": "ozctX/5/LYVDweWgIW7CVCqWv+JZkK9hGs8pTgd9kZQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Configuration.AcceptableValueBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Configuration.AcceptableValueBase.html",
+          "hash": "FXMDH5cFuporlxR9eoIAXcYGdzed4lnpubqiGXIjnVQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Configuration.AcceptableValueList-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Configuration.AcceptableValueList-1.html",
+          "hash": "tv4slUpez0pswPzMzDqbvkvtcU4DmB1FTfrP7nwqgI0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Configuration.AcceptableValueRange-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Configuration.AcceptableValueRange-1.html",
+          "hash": "3DqDpqMXMLtVBMVWZ0jwkc1d9fHnjOB4NYjLwvzYCq0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Configuration.ConfigDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Configuration.ConfigDefinition.html",
+          "hash": "5zoLMcH6U2TXUysIvvaD1qnxyJnNqbOYkymXFWQ134s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Configuration.ConfigDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Configuration.ConfigDescription.html",
+          "hash": "IYqW9/6GMJmWb4R+lJTGqNIvFS8TrNeepkFvGbT7ehY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Configuration.ConfigEntry-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Configuration.ConfigEntry-1.html",
+          "hash": "KOuDR6s5YSRwgieA0b8bNnUe7O9XDoGha/LP7ndTa+0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Configuration.ConfigEntryBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Configuration.ConfigEntryBase.html",
+          "hash": "14IiZw6kJIREXBgcEf64kI8WWXiJzyxrGN69soVhbCY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Configuration.ConfigFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Configuration.ConfigFile.html",
+          "hash": "cHkvDsVi79kRv/A4fonOZujp3QSRRXQfDCfidnnL15k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Configuration.ConfigWrapper-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Configuration.ConfigWrapper-1.html",
+          "hash": "/CZ9BYYn90bU1yb2f+RdOni3bRjqCAbqdwf3ydQYZaA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Configuration.KeyboardShortcut.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Configuration.KeyboardShortcut.html",
+          "hash": "viar62TIkC50xI8hMbR6SaeGN34BRoQtRJZBnVm4+bM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Configuration.SettingChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Configuration.SettingChangedEventArgs.html",
+          "hash": "Brx/bUuZN5/fqb/WlRfO4i8ySfkMnMdT3NtA9zb+VUE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Configuration.TomlTypeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Configuration.TomlTypeConverter.html",
+          "hash": "wOuj3yxaY8KgJyhTsvFySTDFV13zznjVqKIoZZHDyKw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Configuration.TypeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Configuration.TypeConverter.html",
+          "hash": "AgPZE2QztWVeD4wgLq3T5YBXZRMivb2gfOsNgub13yw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Configuration.html",
+          "hash": "fhEKf/wy55idLjo+muxxGAd00u3t8Z5wEVMp5CCR+44="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Logging.ConsoleLogListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Logging.ConsoleLogListener.html",
+          "hash": "x90Ex3tifaBByjAW4tVnL5J0V8xhPWJJogWvXbuJJBg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Logging.DiskLogListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Logging.DiskLogListener.html",
+          "hash": "hSKI4ILDBAs3Zp4g1EMWXiflXR3ehWwRFIRjX9BUlHA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Logging.ILogListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Logging.ILogListener.html",
+          "hash": "6kabbEI04H+CgCgghhizl4UurmiC8xbWEiCtMmT+lW8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Logging.ILogSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Logging.ILogSource.html",
+          "hash": "FFfPAl6/lycq2CVHSAXGyOxj2NTuP15+kd2m5xsCbEs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Logging.LogEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Logging.LogEventArgs.html",
+          "hash": "hXyPOFP0oni6A/jjj/msbOVQPwkypNupvsrg/xHJE8g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Logging.LogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Logging.LogLevel.html",
+          "hash": "EHFeHkY1v/BkthdsaicDg3WsL88o64iCG9tDwMzbhQU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Logging.LogLevelExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Logging.LogLevelExtensions.html",
+          "hash": "KGhPdFvIUTZxCpc8youylhgUhuYb5qnhzzz7FQsVpDs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Logging.Logger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Logging.Logger.html",
+          "hash": "yaJ6jvcHfLdFUNE4sQRoCeNe4nOfnHckZe4YQNNckow="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Logging.ManualLogSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Logging.ManualLogSource.html",
+          "hash": "FjWURuwclHDHFRAFyH7ahDmH9gokZU6kRVvogMfW4ak="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Logging.TraceLogSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Logging.TraceLogSource.html",
+          "hash": "V2hNj7E7rx7Rhld0AFDFbVsKZ3XzP+3gy8DvRFW8LDE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Logging.UnityLogListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Logging.UnityLogListener.html",
+          "hash": "VSLDqe9H1wyAzr73PuMXLAYeBFxGuEqThkGb/4WTgMM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Logging.UnityLogSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Logging.UnityLogSource.html",
+          "hash": "s8Iq9MTrc1KIWMvMc/u8gqzuQ1UU9N7RXuggBtTCU8k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Logging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Logging.html",
+          "hash": "YNtvO1+ADnTIBp9S9k3qlEmtojJ1INQWithllY6epSs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.MetadataHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.MetadataHelper.html",
+          "hash": "WaSzNHSLrcgeMwXqnKsw7omVk21C9SEvVvu0uGsuxuM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Paths.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Paths.html",
+          "hash": "6XrY45AAZZ7fRmE+WySWwU596Z5/syfN/3VS9gTmrGg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.PluginInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.PluginInfo.html",
+          "hash": "BewZiFA9G9IaQnjX/XYvoAbSsDeBNSfVIifRzm2WIpM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.ThreadingExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.ThreadingExtensions.html",
+          "hash": "oO7PDSCahkmd4w0hz1rgC/wST0Ozs/mmp0+jazgJZHk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.ThreadingHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.ThreadingHelper.html",
+          "hash": "LGO5pLl2+e/f8WklGUsw52NrLVxDGHfC5PN87bgGo+g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.Utility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.Utility.html",
+          "hash": "pe4TYKTLgUlJZOKwS2vuWS+bV99C+gwg/3/JPtFVVOI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BepInEx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BepInEx.html",
+          "hash": "DXDaDsTM5vbbBAYQFlg6kn8JXZuMyQbR86Rik0bSm48="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "pCDGoDYo2rhNTR6rP2jdpwnbeX6YWmEdpaht6QSbk0E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "Z0ng9aoBtgScyLZOdNJUTDJiwzIPsdLawAUeSIMYPF0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/advanced/compatibility.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/advanced/compatibility.html",
+          "hash": "UkMXnds/BGVUKZB8WF24j7su5LtU9DW/7e5QGNoXWuk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/advanced/debug/assemblies_dnSpy.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/advanced/debug/assemblies_dnSpy.html",
+          "hash": "5BKhIuAoEE9ur9meVF1zxjMP4ZX4cIOiM7lijivYh6E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/debug/images/bepin_breakpoint_hit.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/debug/images/bepin_breakpoint_hit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/debug/images/dnSpy_asscsharp_beakpoint_hit.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/debug/images/dnSpy_asscsharp_beakpoint_hit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/debug/images/dnSpy_breakpoint_hit.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/debug/images/dnSpy_breakpoint_hit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/debug/images/dnSpy_debug.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/debug/images/dnSpy_debug.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/debug/images/dnSpy_dragndrop.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/debug/images/dnSpy_dragndrop.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/debug/images/dnSpy_module_breakpoints.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/debug/images/dnSpy_module_breakpoints.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/debug/images/dnSpy_modules.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/debug/images/dnSpy_modules.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/debug/images/dnSpy_modules_view.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/debug/images/dnSpy_modules_view.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/debug/images/dnSpy_set_breakpoint.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/debug/images/dnSpy_set_breakpoint.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/debug/images/dnSpy_start_debug.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/debug/images/dnSpy_start_debug.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/debug/images/vstu_debugger_select.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/debug/images/vstu_debugger_select.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/debug/images/vstu_pdb2mdb.gif",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/debug/images/vstu_pdb2mdb.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/debug/images/vstu_plugin_install.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/debug/images/vstu_plugin_install.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/debug/images/vstu_select.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/debug/images/vstu_select.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/debug/images/vstu_select_process.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/debug/images/vstu_select_process.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/debug/images/vstu_works.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/debug/images/vstu_works.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/advanced/debug/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/advanced/debug/index.html",
+          "hash": "BMRKrrOwh+IBqEAp+KFlcqxEUBYULv7rxT05abG9dks="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/advanced/debug/plugins_dnSpy.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/advanced/debug/plugins_dnSpy.html",
+          "hash": "VMew5IP7REND50aRIJ7N39Ow+to8DwGziF/CFvoULbM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/advanced/debug/plugins_vs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/advanced/debug/plugins_vs.html",
+          "hash": "s65YB7cJs+jUmSXO/qujpSp/jHmnFKc2p1/aNWgsR8M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/images/protontricks_select.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/images/protontricks_select.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/images/protontricks_winecfg.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/images/protontricks_winecfg.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/images/protontricks_wineprefix.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/images/protontricks_wineprefix.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/images/steam_launch_opts.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/images/steam_launch_opts.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/images/steam_local_files.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/images/steam_local_files.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/images/steam_props.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/images/steam_props.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/advanced/images/winecfg_add_lib.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/advanced/images/winecfg_add_lib.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/advanced/steam_interop.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/advanced/steam_interop.html",
+          "hash": "U2RQJdL2I2dUcI/jEPNzZD+6ughvg7CigVdAZKq8RWA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/dev_guide/dev_tools.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/dev_guide/dev_tools.html",
+          "hash": "JHZHV25FXd+rD/9KSHEJlxxQC+aQJGiSufWDELrv9pk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/dev_guide/plugin_tutorial/1_setup.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/dev_guide/plugin_tutorial/1_setup.html",
+          "hash": "s4JicJQSKRVybGcCJwrNU4qtV8muzUl/vmrTFZXu7KE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/dev_guide/plugin_tutorial/2_plugin_start.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/dev_guide/plugin_tutorial/2_plugin_start.html",
+          "hash": "K8yluXmr3kBhn899B3dwFVp3VdkRs4FH1OEDLcezrfA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/dev_guide/plugin_tutorial/3_configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/dev_guide/plugin_tutorial/3_configuration.html",
+          "hash": "cOhb3G4uEPVWvoclB32CM8743eadTDKfcT1dc8dIBhk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/dev_guide/plugin_tutorial/4_logging.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/dev_guide/plugin_tutorial/4_logging.html",
+          "hash": "gThBFW9tQeP8IUxn6kDL0vwrNFdz0zheZ66EtHtsax0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/dev_guide/plugin_tutorial/5_distributing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/dev_guide/plugin_tutorial/5_distributing.html",
+          "hash": "hXJI5+XA/CObIutqziyaD+bKL07JgKiFGxKUBk5Afug="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/dev_guide/plugin_tutorial/images/build-output.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/dev_guide/plugin_tutorial/images/build-output.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/dev_guide/plugin_tutorial/images/libs-folder.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/dev_guide/plugin_tutorial/images/libs-folder.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/dev_guide/plugin_tutorial/images/plugin-folder.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/dev_guide/plugin_tutorial/images/plugin-folder.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/dev_guide/plugin_tutorial/images/plugin-works.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/dev_guide/plugin_tutorial/images/plugin-works.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/dev_guide/plugin_tutorial/images/vs-add-references.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/dev_guide/plugin_tutorial/images/vs-add-references.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/dev_guide/plugin_tutorial/images/vs-new-plugin.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/dev_guide/plugin_tutorial/images/vs-new-plugin.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/dev_guide/plugin_tutorial/images/vs-open-solution.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/dev_guide/plugin_tutorial/images/vs-open-solution.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/dev_guide/plugin_tutorial/images/vs-references.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/dev_guide/plugin_tutorial/images/vs-references.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/dev_guide/plugin_tutorial/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/dev_guide/plugin_tutorial/index.html",
+          "hash": "f06QkCLseIiF9QaZFrkGitFJoTc3imkWmGo7rsrjFGM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/dev_guide/preloader_patchers.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/dev_guide/preloader_patchers.html",
+          "hash": "KQGOoawcX9ee2poP+GCmA47fonmX1UWteTTMNz8XwMo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/dev_guide/runtime_patching.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/dev_guide/runtime_patching.html",
+          "hash": "xs2WD2lZ8OldDeKkU7HeMgEqjIAJ6ahM7cBK0LPvugs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/index.html",
+          "hash": "axRmLSNSEoPDTJYe3AO5FlZU/iBykD/CTtgDxOzWh+8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "OARnxHHMO7HJMfKz6iBwM8SKtYw4JmJH6a5hKENpbP0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/user_guide/configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/user_guide/configuration.html",
+          "hash": "fTX9VDlqWyqkCiFEt0byDHBlqcl4tuMGSsIKZL1saXw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/user_guide/images/installer_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/user_guide/images/installer_1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/user_guide/images/installer_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/user_guide/images/installer_2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/user_guide/images/installer_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/user_guide/images/installer_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/user_guide/images/manual_install_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/user_guide/images/manual_install_1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/user_guide/images/x64process_example.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/user_guide/images/x64process_example.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/user_guide/images/x86process_example.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/user_guide/images/x86process_example.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/user_guide/installation/hardpatching.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/user_guide/installation/hardpatching.html",
+          "hash": "BU/uXpVX+z/25pr8a35fAGpIZp57JpiBSO34IXmCY7k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "invalid-tab-group"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/user_guide/installation/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/user_guide/installation/index.html",
+          "hash": "/fOfQV+zXFERSriHW7eTSBErkZ6lZx+I85DxDwl1Uag="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/user_guide/troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/user_guide/troubleshooting.html",
+          "hash": "o8PEtqF6ITbg7O7jIX6kYxx7a6fFSzkmL7FB9ji7zLg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/user_guide/upgrading.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/user_guide/upgrading.html",
+          "hash": "AvlK5LIZXYXpEqrsToRNBZwwG7ylacqIFXHGwSIgiVs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "Jp54eYEWplV8oLkaItI0pYy/4N2yYyLXMQFHeLsMxZQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "TaBeOHTbN59L/fPi2esrW+lUIrU3IanzBPpfjlLU7d4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 23,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 45,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -6,6 +6,8 @@ on:
       - gh-pages
       - common
 
+concurrency: docs-build
+
 jobs:
   build:
 
